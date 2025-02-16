@@ -26,7 +26,7 @@ app.use(morgan("dev"));
 connectDB();
 
 // Routes
-app.use("/api/auth", authRoutes);
+app.use("/api/auth", require("./src/routes/authRoutes"));  // ✅ Ensure correct path
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/users", userRoutes);
