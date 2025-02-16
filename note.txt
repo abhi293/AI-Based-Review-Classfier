@@ -1,0 +1,10 @@
+API testing in postman
+URL.../api/users/register (or, login)
+
+required json contents :
+{
+    "name":" ",
+    "email":"your-email@email.com",
+    "password":" ",
+    "role":" " (user or admin)
+}
