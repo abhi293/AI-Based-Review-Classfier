@@ -15,4 +15,4 @@ def preprocess_data(filepath):
     print(f"Shape of X: {X.shape}")  # Debugging
     print(f"Shape of y: {y.shape}")  # Debugging
 
-    return X, y
+    return X, y, vectorizer  # Return vectorizer along with X, y
