@@ -18,12 +18,13 @@ df = pd.read_csv(train_file, nrows=sample_size, header=None)
 
 # Measure preprocessing time
 start_time = time.time()
-X_sample, y_sample = preprocess_data(train_file)  # Pass file path, not DataFrame
+X_sample, y_sample, vectorizer = preprocess_data(train_file)
+
 preprocess_time = time.time() - start_time
 
 # Measure training time
 start_time = time.time()
-train_model(X_sample, y_sample)  # Ensure `train_model` is a function in `train_model.py`
+train_model(X_sample, y_sample, vectorizer)  # Ensure `train_model` is a function in `train_model.py`
 train_time = time.time() - start_time
 
 # Estimate for full dataset
